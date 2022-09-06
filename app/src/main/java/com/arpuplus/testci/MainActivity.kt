@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(ui.root)
         ui.editTextTextPersonName.addTextChangedListener {
             viewModel.email = it.toString()
+
         }
     }
 }
