@@ -19,7 +19,7 @@ class MainViewModelTest {
 
     @Test
     fun `test email given a value contains at symbol expected to be valid`(){
-        viewModel.email = "aaaaaee.com"
+        viewModel.email = "aaaaa@ee.com"
         assertEquals(viewModel.validation.value,"valid")
     }
 
