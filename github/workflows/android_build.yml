@@ -3,14 +3,16 @@ name: Android build
 on:
   push:
     branches: [ "master" ]
-
 jobs:
   build:
-
     runs-on: obuntu-latest
     steps:
+      - uses: actions/checkout@v1
+      - name: Set Up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
           - name: Run Tests
             run: ./gradlew test
-
           - name: Build Project
             run: ./gradlew assemble
