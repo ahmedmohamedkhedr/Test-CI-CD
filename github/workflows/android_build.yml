@@ -10,8 +10,6 @@ jobs:
     runs-on: obuntu-latest
     steps:
       - uses: actions/checkout@v1
-
-
       - name: Set Up JDK
         uses: actions/setup-java@v1
         with:
