@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
-g
+
       - name: Run tests
         run: ./gradlew test
 
