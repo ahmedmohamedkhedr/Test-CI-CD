@@ -26,8 +26,8 @@ jobs:
           name: unit_test_report
           path: app/build/reports/tests/testDebugUnitTest/
 
- if: github.ref == 'refs/heads/testing'
   package:
+    if: github.ref == 'refs/heads/testing'
     name: Generate APK
     runs-on: ubuntu-latest
     steps:
