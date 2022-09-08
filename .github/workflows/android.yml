@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
-
+g
       - name: Run tests
         run: ./gradlew test
 
@@ -25,7 +25,6 @@ jobs:
 
   package:
     if: github.ref == 'refs/heads/testing'
-    needs: [ unit-test ]
     name: Generate APK
     runs-on: ubuntu-latest
     steps:
@@ -33,7 +32,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: set up JDK 1.8
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v3
         with:
           java-version: 1.8
 
