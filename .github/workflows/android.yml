@@ -19,6 +19,8 @@ jobs:
 
       - name: Run tests
         run: ./gradlew test
+        with:
+          reporter: jest-junit
 
       - name: Upload test report
         uses: actions/upload-artifact@v3
