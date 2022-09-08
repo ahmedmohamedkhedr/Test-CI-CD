@@ -20,13 +20,6 @@ jobs:
       - name: Run tests
         run: ./gradlew test
 
-      - name: Test Report
-        uses: dorny/test-reporter@v1
-        with:
-          name: JEST Tests
-          path: reports/jest-*.xml
-          reporter: jest-junit
-
       - name: Upload test report
         uses: actions/upload-artifact@v3
         with:
