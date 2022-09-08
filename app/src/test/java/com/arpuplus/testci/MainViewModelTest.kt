@@ -23,6 +23,7 @@ class MainViewModelTest {
         assertEquals(viewModel.validation.value,"valid")
     }
 
+
     @Test
     fun `test email given a value not contains at symbol expected to be invalid`(){
         viewModel.email = "aaaaaee.com"
